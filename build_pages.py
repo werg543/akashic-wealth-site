@@ -405,7 +405,7 @@ terms = head('Terms · Akashic Wealth', 'Terms of membership for the Akashic Wea
 privacy = head('Privacy · Akashic Wealth', 'What Akashic Wealth collects and how it is used.') + legal_page('Privacy Policy', 'Legal', privacy_blocks) + FOOT
 risk = head('Risk Disclosure · Akashic Wealth', 'Trading risk disclosure for the Akashic Wealth signal group.') + legal_page('Risk Disclosure', 'Legal', risk_blocks) + FOOT
 
-EVENTS = [dict(tag='free-class', kind='Free class', title='How we find and research high&#8209;conviction trades', meta='Sunday, October 4 &middot; Online &middot; time announced soon',
+EVENTS = [dict(tag='free-class', kind='Free class', title='How we find and research high&#8209;conviction trades', meta='Sunday, October 4 &middot; 4 PM ET &middot; Online',
     pitch='The process behind a trade, shown in full, rather than a callout to follow.',
     covers=['Finding 0DTE, swing and LEAPS setups across timeframes', 'Researching a company from the ground up', 'The catalysts that matter, and the hype and red herrings that do not',
             'Building a thesis and knowing what would invalidate it', 'Setups with a strong risk to reward'])]
