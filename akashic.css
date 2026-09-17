@@ -1427,20 +1427,25 @@ section, footer { position: relative; z-index: 1; }
 .ring-nav.prev { left: max(16px, calc(50% - 720px)); } .ring-nav.next { right: max(16px, calc(50% - 720px)); }
 .ring-cap { text-align: center; font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-faint); margin-top: 14px; }
 .desk { display: grid; grid-template-columns: 2fr 1fr; gap: 18px; align-items: stretch; }
+.desk + .desk, .peek-label + .desk { margin-top: 18px; }
+.desk.fut-members { grid-template-columns: 1fr 1fr; }
+.peek-label { display: flex; align-items: center; gap: 18px; justify-content: center; margin: 56px auto 22px; max-width: 720px; padding: 0 var(--pad); font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2vw, 24px); letter-spacing: 0.03em; color: var(--gold-bright); }
+.peek-label::before, .peek-label::after { content: ''; flex: 1; height: 1px; background: var(--line-soft); }
+.ring-wrap + .shell .desk:first-child { margin-top: 0; }
 .chan.recap { display: flex; flex-direction: column; }
 .recap-cols { align-content: start; }
 .desk-col { display: grid; gap: 18px; }
-.chan { border: 1px solid var(--line-soft); border-radius: 6px; overflow: hidden; background: #2a2521; }
+.chan { border: 1px solid var(--line-soft); border-radius: 6px; overflow: hidden; background: #2a2521; display: flex; flex-direction: column; }
 .recap-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; padding: 6px 16px 12px; align-items: start; }
 .recap-cols img { display: block; max-width: 100%; height: auto; }
-.chan-body { display: grid; gap: 10px; padding: 14px; background: #131316; }
+.chan-body { display: grid; gap: 10px; padding: 14px; background: #131316; flex: 1; align-content: start; }
 .chan-body img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line-soft); border-radius: 4px; background: #1a1a1e; }
 .chan-body img.tint { background: #2a2521; }
 @media (max-width: 1000px) { .ring-wrap { --cw: 400px; --rh: 400px; } }
 @media (max-width: 760px) {
   .ring-wrap { --cw: 300px; --rh: 320px; }
   .ring-scene { perspective: 1000px; }
-  .desk, .recap-cols { grid-template-columns: 1fr; }
+  .desk, .desk.fut-members, .recap-cols { grid-template-columns: 1fr; }
   .recap-cols { gap: 0; }
 }
 
